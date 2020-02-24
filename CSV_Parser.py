@@ -14,7 +14,7 @@ class CSV_Parser:
         self.parsed_data = list()
         fields = next(csv_data)
         for row in csv_data:
-            (self.parsed_data.append(dict(zip(fields, row)))
+            self.parsed_data.append(dict(zip(fields, row)))
         raw_data.close()
 
 if __name__ == '__main__':
