@@ -17,7 +17,7 @@ def create_geojson(parsed_data):
                                     'Date (GMT)': line['Tanggal (GMT)'],
                                     'Depth (km)': line['Kedalaman (km)']}
         point_data['geometry'] = {'type': 'Point',
-                                  'coordinates': (line['Lintang (°)'], line['Bujur (°)'])}
+                                  'coordinates': (line['Bujur (°)'], line['Lintang (°)'])}
 
         map_data.append(point_data)
         geo_map.setdefault('features', []).append(point_data)
